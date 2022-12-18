@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+div.parent{
+    width: 300px;
+    height: 400px;
+    background-color: blueviolet;
+    box-shadow: 5px 5px 5px black;
+    margin: 50px auto;
+    position: relative;
+    overflow: hidden;
+}
+div.parent>div.image{
+    width: inherit;
+    height: inherit;
+}
+div.parent>div.image>img{
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+    transition: 300ms;
+}
+div.parent:hover>div.image>img{
+    transform: scale(1.5,1.5);
+    transform-origin: right bottom;
+}
+div.parent>div.cover{
+    width: inherit;
+    height: inherit;
+    background-color: rgba(0, 0, 0, 0.527);
+    position: absolute;
+    left: -100%;
+    top: 0;
+    padding: 50px;
+    box-sizing: border-box;
+    transition: 300ms;
+}   
+div.parent>div.cover>h2{
+    text-align: center;
+    margin-bottom: 20px;
+    color: whitesmoke;
+    font-size: 32px;
+    transform: translateX(-100px);
+    opacity: 0;
+    transition: 300ms;
+    transition-delay: 100ms;
+}
+div.parent>div.cover>h3{
+    text-align: center;
+    margin-bottom: 20px;
+    color: whitesmoke;
+    font-size: 32px;
+    transform: translateX(-100px);
+    opacity: 0;
+    transition: 300ms;
+    transition-delay: 200ms;
+}
+div.parent>div.cover>a{
+    display: block;
+    width: 150px;
+    height: 40px;
+    background-color: green;
+    text-align: center;
+    text-decoration: none;
+    line-height: 40px;
+    color: whitesmoke;
+    font-size: 14px;
+    text-transform: capitalize;
+    margin: 10px auto;
+    box-shadow: 5px 5px 5px black;
+    transform: translateX(-100px);
+    opacity: 0;
+    transition: 300ms;
+    transition-delay: 300ms;
+}
+div.parent:hover>div.cover{
+    left: 0;
+}
+div.parent:hover>div.cover>h2{
+    transform: translateX(0);
+    opacity: 1;
+}
+div.parent:hover>div.cover>h3{
+    transform: translateX(0);
+    opacity: 1;
+}
+div.parent:hover>div.cover>a{
+    transform: translateX(0);
+    opacity: 1;
+}
